@@ -20,7 +20,7 @@ class CreateProductTable extends Migration
             $table->string('nama_barang');
             $table->string('berat_barang')->nullable();
             $table->string('merek')->nullable();
-            $table->integer('stok')->default(15);
+            $table->integer('stok')->default(15)->nullable();
             $table->bigInteger('harga');
             $table->string('keterangan')->default('Tersedia');
             $table->timestamps();

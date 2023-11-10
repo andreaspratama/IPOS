@@ -77,8 +77,8 @@
                 <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Jenis Barang</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <select class="form-control" name="jenis_barang">
-                    <option value="Produksi">Produksi</option>
-                    <option value="Konsumsi">Konsumsi</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Makanan">Makanan</option>
                   </select>
                 </div>
               </div>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 error-notice" id="nama_barang_error"></div>
               </div>
-              <div class="form-group row">
+              {{-- <div class="form-group row">
                 <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Berat Barang</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <div class="input-group">
@@ -106,13 +106,13 @@
                       </div>
                     </div>
                 </div>
-              </div>
-              <div class="form-group row">
+              </div> --}}
+              {{-- <div class="form-group row">
                 <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Merek Barang</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
                   <input type="text" class="form-control" name="merek">
                 </div>
-              </div>
+              </div> --}}
               <div class="form-group row" @if($supply_system->status == false) hidden="" @endif>
                 <label class="col-lg-3 col-md-3 col-sm-12 col-form-label font-weight-bold">Stok Barang</label>
                 <div class="col-lg-9 col-md-9 col-sm-12">
@@ -158,7 +158,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-12">
+  {{-- <div class="col-12">
     <div class="alert alert-primary d-flex justify-content-between align-items-center" role="alert">
       @if($supply_system->status == false)
       <div class="text-instruction">
@@ -172,7 +172,7 @@
       <a href="{{ url('/supply/system/nonactive') }}" class="btn stok-btn">Nonaktifkan</a>
       @endif
     </div>
-  </div>
+  </div> --}}
   <div class="col-12 grid-margin">
     <div class="card card-noborder b-radius">
       <div class="card-body">

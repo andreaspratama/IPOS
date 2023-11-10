@@ -78,7 +78,7 @@
 			  			<label class="col-12 font-weight-bold col-form-label">Kode Barang <span class="text-danger">*</span></label>
 					  	<div class="col-12">
 					  		<div class="input-group">
-					  			<input type="text" class="form-control number-input" name="kode_barang" placeholder="Masukkan Kode Barang">
+					  			<input type="text" class="form-control" name="kode_barang" placeholder="Masukkan Kode Barang">
 					  			<div class="inpu-group-prepend">
 					  				<button class="btn btn-inverse-primary btn-sm btn-scan shadow-sm ml-2" type="button" data-toggle="modal" data-target="#scanModal"><i class="mdi mdi-crop-free"></i></button>
 					  			</div>
@@ -102,15 +102,15 @@
 							  	<div class="col-12">
 							  		<select class="form-control" name="jenis_barang">
 							  			<option value="">-- Pilih Jenis Barang --</option>
-							  			<option value="Produksi">Produksi</option>
-							  			<option value="Konsumsi">Konsumsi</option>
+							  			<option value="Minuman">Minuman</option>
+							  			<option value="Makanan">Makanan</option>
 							  		</select>
 							  	</div>
 								<div class="col-12 error-notice" id="jenis_barang_error"></div>
 					  		</div>
 					  	</div>
 					</div>
-					<div class="form-group row">
+					{{-- <div class="form-group row">
 					  	<div class="col-lg-6 col-md-6 col-sm-12 space-bottom">
 					  		<div class="row">
 					  			<label class="col-12 font-weight-bold col-form-label">Berat Barang</label>
@@ -139,7 +139,7 @@
 							  	</div>
 					  		</div>
 					  	</div>
-					</div>
+					</div> --}}
 					<div class="form-group row">
 						@if($supply_system->status == true)
 					  	<div class="col-lg-6 col-md-6 col-sm-12 space-bottom">

@@ -67,8 +67,8 @@
                 @if($product->stok != 0)
                 <li class="list-group-item d-flex justify-content-between align-items-center active-list">
                   <div class="text-group">
+                    <p class="m-0 txt-dark" style="font-size: 18px;">{{ $product->nama_barang }}</p>
                     <p class="m-0">{{ $product->kode_barang }}</p>
-                    <p class="m-0 txt-light">{{ $product->nama_barang }}</p>
                   </div>
                   <div class="d-flex align-items-center">
                     <span class="ammount-box bg-secondary mr-1"><i class="mdi mdi-cube-outline"></i></span>
@@ -80,8 +80,8 @@
                 @else
                 <li class="list-group-item d-flex justify-content-between align-items-center active-list">
                   <div class="text-group">
+                    <p class="m-0 txt-dark" style="font-size: 18px;">{{ $product->nama_barang }}</p>
                     <p class="m-0">{{ $product->kode_barang }}</p>
-                    <p class="m-0 txt-light">{{ $product->nama_barang }}</p>
                   </div>
                   <div class="d-flex align-items-center">
                     <span class="ammount-box bg-green mr-1"><i class="mdi mdi-coin"></i></span>

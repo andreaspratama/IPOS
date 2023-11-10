@@ -30,49 +30,51 @@
   ->first();
   @endphp
   @if($access->kelola_akun == 1)
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#kelola_akun" aria-expanded="false" aria-controls="kelola_akun">
-      <span class="menu-title">Kelola Akun</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="kelola_akun">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/account') }}">Daftar Akun</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/access') }}">Hak Akses</a>
-        </li>
-      </ul>
-    </div>
-  </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#kelola_akun" aria-expanded="false" aria-controls="kelola_akun">
+        <span class="menu-title">Kelola Akun</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="kelola_akun">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/account') }}">Daftar Akun</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/access') }}">Hak Akses</a>
+          </li>
+        </ul>
+      </div>
+    </li>
   @endif
+
   @if($access->kelola_barang == 1)
-  @if(\App\Supply_system::first()->status == true)
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#kelola_barang" aria-expanded="false" aria-controls="kelola_barang">
-      <span class="menu-title">Kelola Barang</span>
-      <i class="menu-arrow"></i>
-    </a>
-    <div class="collapse" id="kelola_barang">
-      <ul class="nav flex-column sub-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/product') }}">Daftar Barang</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url('/supply') }}">Pasok Barang</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  @else
-  <li class="nav-item">
-    <a class="nav-link" href="{{ url('/product') }}">
-      <span class="menu-title">Kelola Barang</span>
-    </a>
-  </li>
+    @if(\App\Supply_system::first()->status == true)
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#kelola_barang" aria-expanded="false" aria-controls="kelola_barang">
+        <span class="menu-title">Kelola Barang</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="kelola_barang">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/product') }}">Daftar Barang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/supply') }}">Pasok Barang</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    @else
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url('/product') }}">
+        <span class="menu-title">Kelola Barang</span>
+      </a>
+    </li>
+    @endif
   @endif
-  @endif
+
   @if($access->transaksi == 1)
   <li class="nav-item">
     <a class="nav-link" href="{{ url('/transaction') }}">
@@ -80,6 +82,7 @@
     </a>
   </li>
   @endif
+  
   @if($access->kelola_laporan == 1)
   <li class="nav-item">
     <a class="nav-link" data-toggle="collapse" href="#kelola_laporan" aria-expanded="false" aria-controls="kelola_laporan">
